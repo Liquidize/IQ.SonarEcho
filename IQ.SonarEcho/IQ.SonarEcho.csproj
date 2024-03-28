@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="Dalamud.Plugin.Bootstrap.targets"/>
+
+  <PropertyGroup>
+    <Authors>Kaliya</Authors>
+    <Company></Company>
+    <Version>0.0.0.1</Version>
+    <Description>A plugin to relay Sonar pings to Echo.</Description>
+    <Copyright>2024 Daniel 'Kaliya' Deptula</Copyright>
+    <PackageProjectUrl>https://github.com/Liquidize/IQ.SonarEcho</PackageProjectUrl>
+    <PackageLicenseExpression>Not Licensed</PackageLicenseExpression>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>IQ.SonarEcho</RootNamespace>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="WatsonWebsocket" Version="4.1.1" />
+  </ItemGroup>
+</Project>
