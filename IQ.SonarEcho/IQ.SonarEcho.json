@@ -5,9 +5,17 @@
     "Description": "A plugin to bridge the gap between Sonar and Echo - the Discord Bot, letting other hunt discord servers get relays.",
     "ApplicableVersion": "any",
     "Tags": [
-        "sonar",
-        "echo",
-        "hunts",
-        "relay"
+        "Sonar",
+        "Hunt",
+        "Hunts",
+        "Fate",
+        "Fates",
+        "Relay",
+        "Relays",
+        "Automated",
+        "Automatic",
+        "Echo",
+        "Discord",
+        "Bot"
     ]
 }

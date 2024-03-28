@@ -1,0 +1,21 @@
+{
+  "Author": "Kaliya",
+  "Name": "Echo.Sonar",
+  "InternalName": "IQ.SonarEcho",
+  "AssemblyVersion": "0.0.0.1",
+  "Description": "A plugin to bridge the gap between Sonar and Echo - the Discord Bot, letting other hunt discord servers get relays.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "sonar",
+    "echo",
+    "hunts",
+    "relay"
+  ],
+  "DalamudApiLevel": 9,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "Punchline": "Connecting Sonar to Echo one install at a time!",
+  "AcceptsFeedback": true
+}
