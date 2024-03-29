@@ -28,11 +28,11 @@
         "IconUrl": "https://i.imgur.com/orR6E3t.png",
         "ImageUrls": [
         ],
-        "DownloadLinkInstall": "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/main/release/latest.zip",
+        "DownloadLinkInstall": "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/master/release/latest.zip",
         "IsHide": false,
         "IsTestingExclusive": false,
-        "DownloadLinkTesting":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/main/release/latest.zip",
-        "DownloadLinkUpdate":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/main/release/latest.zip",
+        "DownloadLinkTesting":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/master/release/latest.zip",
+        "DownloadLinkUpdate":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/master/release/latest.zip",
         "DownloadCount": 0,
         "LastUpdate": "1711669890"
     }
