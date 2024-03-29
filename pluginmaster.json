@@ -25,7 +25,7 @@
         ],
         "DalamudApiLevel": 9,
         "LoadPriority": 0,
-        "IconUrl": "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/main/logo.png",
+        "IconUrl": "https://github.com/Liquidize/IQ.SonarEcho/blob/master/logo.png?raw=true",
         "ImageUrls": [
         ],
         "DownloadLinkInstall": "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/main/release/latest.zip",
