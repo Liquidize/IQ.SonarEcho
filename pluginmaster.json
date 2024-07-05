@@ -6,7 +6,7 @@
         "Description": "A plugin to bridge the gap between Sonar and Echo - the Discord Bot, letting other hunt discord servers get relays.",
         "Changelog": "See the Echo Support discord #announcements channel for more information",
         "InternalName": "IQ.SonarEcho",
-        "AssemblyVersion": "0.0.0.1",
+        "AssemblyVersion": "1.0.0.0",
         "RepoUrl": "https://github.com/Liquidize/IQ.SonarEcho",
         "ApplicableVersion": "any",
         "Tags": [
@@ -23,7 +23,7 @@
             "Discord",
             "Bot"
         ],
-        "DalamudApiLevel": 9,
+        "DalamudApiLevel": 10,
         "LoadPriority": 0,
         "IconUrl": "https://i.imgur.com/orR6E3t.png",
         "ImageUrls": [
@@ -34,6 +34,6 @@
         "DownloadLinkTesting":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/master/release/latest.zip",
         "DownloadLinkUpdate":  "https://raw.githubusercontent.com/Liquidize/IQ.SonarEcho/master/release/latest.zip",
         "DownloadCount": 0,
-        "LastUpdate": "1711669890"
+        "LastUpdate": "1720212286"
     }
 ]

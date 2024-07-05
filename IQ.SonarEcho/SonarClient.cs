@@ -30,8 +30,9 @@ public class SonarClient : IDisposable
         _chatGui.ChatMessage += ChatGuiOnChatMessage;
     }
 
+
     private void ChatGuiOnChatMessage(
-        XivChatType type, uint senderid, ref SeString sender, ref SeString message, ref bool ishandled)
+        XivChatType type, int timestamp, ref SeString sender, ref SeString message, ref bool ishandled)
     {
         if (type.ToString() != _config.SonarChatChannel)
         {

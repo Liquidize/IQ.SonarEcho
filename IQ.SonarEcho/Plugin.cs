@@ -28,7 +28,7 @@ namespace IQ.SonarEcho
     {
         public string Name => "Echo - Sonar";
 
-        private DalamudPluginInterface PluginInterface { get; init; }
+        private IDalamudPluginInterface PluginInterface { get; init; }
         private ICommandManager CommandManager { get; init; }
         public Configuration Configuration { get; init; }
         public WindowSystem WindowSystem = new("IQ.SonarEcho");
@@ -44,11 +44,11 @@ namespace IQ.SonarEcho
         public bool DisconnectedManually { get; set; } = false;
         
         public Plugin(
-            [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
-            [RequiredVersion("1.0")] ICommandManager commandManager,
-            [RequiredVersion("1.0")] IPluginLog logger,
-            [RequiredVersion("1.0")] IClientState clientState,
-            [RequiredVersion("1.0")] IChatGui chatGui)
+            IDalamudPluginInterface pluginInterface,
+            ICommandManager commandManager,
+            IPluginLog logger,
+            IClientState clientState,
+            IChatGui chatGui)
         {
             this.PluginInterface = pluginInterface;
             this.CommandManager = commandManager;

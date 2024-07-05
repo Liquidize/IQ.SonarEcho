@@ -12,9 +12,15 @@
     <PackageLicenseExpression>Not Licensed</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
     <RootNamespace>IQ.SonarEcho</RootNamespace>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
   </PropertyGroup>
     
   <ItemGroup>
     <PackageReference Include="WatsonWebsocket" Version="4.1.1" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <ReferencePathWithRefAssemblies Update="C:\Users\Kaliya\AppData\Roaming\XIVLauncher\addon\Hooks\dev\Dalamud.dll" />
   </ItemGroup>
 </Project>
