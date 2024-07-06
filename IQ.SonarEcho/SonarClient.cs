@@ -43,11 +43,10 @@ public class SonarClient : IDisposable
         {
             return;
         }
+        
         var str = message.ToString();
-        str = str.Replace("\ue0bb", "#");
-        str = str.Replace("\ue05d", "$");
         var regExp = new Regex(
-            "Rank\\s*(?<HuntRank>[A-Za-z]+):\\s*(?<HuntName>[^#$]+)\\s*#\\s*(?<Location>.*?)\\s*\\(\\s*(?<XCord>\\d+(\\.\\d+)?)\\s*,\\s*(?<YCord>\\d+(\\.\\d+)?)\\s*\\)\\s*<.*?\\s*(?<World>\\w+)\\s*>",
+            "Rank\\s*(?<RankType>[A-Z]+):\\s*(?<HuntName>.*?)\\s*\ue0bb(?<Location>.*?)\\s*\\(\\s*(?<XCord>\\d+(\\.\\d+)?)\\s*,\\s*(?<YCord>\\d+(\\.\\d+)?)\\s*\\)\\s*(?<Instance>[^\\w\\s])?\\s*<[\\s\\uE000-\\uF8FF]*?(?<World>\\w+)>",
             RegexOptions.IgnoreCase);
         var match = regExp.Match(str);
         if (match.Success)
@@ -61,6 +60,15 @@ public class SonarClient : IDisposable
                     writer.Write(Convert.ToDouble(match.Groups["XCord"].Value));
                     writer.Write(Convert.ToDouble(match.Groups["YCord"].Value));
                     writer.Write(match.Groups["World"].Value);
+                    if (match.Groups.ContainsKey("Instance"))
+                    {
+                        writer.Write(ConvertUnicodeToInstance(match.Groups["Instance"].Value));
+                    }
+                    else
+                    {
+                        writer.Write((byte)0);
+                    }
+
                     writer.Write((byte)(str.IndexOf("was just killed") > -1 ? 2 : 1));
                 }
 
@@ -69,6 +77,21 @@ public class SonarClient : IDisposable
         }
     }
 
+    public byte ConvertUnicodeToInstance(string unicode)
+    {
+        if (string.IsNullOrEmpty(unicode)) return 0;
+        switch (unicode)
+        {
+            case "\ue0b1": return 1;
+            case "\ue0b2": return 2;
+            case "\ue0b3": return 3;
+            case "\ue0b4": return 4;
+            case "\ue0b5": return 5;
+            case "\ue0b6": return 6;
+            default: return 0;
+        }
+    }
+    
     public void Start()
     {
         // If for w.e reason we call Start multiple times we'll just kill the old client and reconnect

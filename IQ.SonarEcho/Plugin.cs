@@ -29,17 +29,17 @@ namespace IQ.SonarEcho
         public string Name => "Echo - Sonar";
 
         private IDalamudPluginInterface PluginInterface { get; init; }
-        private ICommandManager CommandManager { get; init; }
+      [PluginService]  private ICommandManager CommandManager { get; init; }
         public Configuration Configuration { get; init; }
         public WindowSystem WindowSystem = new("IQ.SonarEcho");
 
         private ConfigWindow ConfigWindow { get; init; }
         public WatsonWsClient SocketClient { get; init; }
-        private IPluginLog Log { get; init; }
-        private IChatGui ChatGui { get; init; }
+        [PluginService]     private IPluginLog Log { get; init; }
+        [PluginService]      private IChatGui ChatGui { get; init; }
 
         public SonarClient Client { get; init; }
-        private IClientState ClientState { get; init; }
+        [PluginService]   private IClientState ClientState { get; init; }
 
         public bool DisconnectedManually { get; set; } = false;
         
@@ -51,6 +51,9 @@ namespace IQ.SonarEcho
             IChatGui chatGui)
         {
             this.PluginInterface = pluginInterface;
+
+            PluginInterface.Inject(this);
+            
             this.CommandManager = commandManager;
             this.Log = logger;
             ClientState = clientState;
