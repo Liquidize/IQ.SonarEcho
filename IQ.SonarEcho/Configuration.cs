@@ -14,9 +14,12 @@ namespace IQ.SonarEcho
         public string SonarChatChannel { get; set; } = XivChatType.Echo.ToString();
 
         // Hard code it cause fuck it, who cares?
-        public readonly string IP = "ion.kaliya.io";
+        public readonly string IP = "echo.kaliya.io";
+        #if DEBUG
+        public readonly int PORT = 9001;
+        #else
         public readonly int PORT = 9000;
-        
+        #endif
         // the below exist just to make saving less cumbersome
         [NonSerialized]
         private IDalamudPluginInterface? PluginInterface;
