@@ -17,7 +17,6 @@ using Dalamud.Logging;
 using Dalamud.Plugin.Services;
 using IQ.SonarEcho.Windows;
 using Lumina;
-using Lumina.Excel.GeneratedSheets;
 using Microsoft.VisualBasic;
 using WatsonWebsocket;
 using Thread = FFXIVClientStructs.FFXIV.Client.System.Threading.Thread;
@@ -72,16 +71,17 @@ namespace IQ.SonarEcho
             this.PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
 
             
+           
             ClientState.Login += () =>
             {
                 if (Configuration.ConnectAutomatically)
                     Client.Start();
             };
-            ClientState.Logout += () =>
-            {
-              Client.Stop();
-            };
 
+            ClientState.Logout += (type, code) =>
+            {
+              Client.Stop();  
+            };
             if (ClientState.IsLoggedIn)
             {
                 if (Configuration.ConnectAutomatically)

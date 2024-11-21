@@ -65,11 +65,11 @@ public class ConfigWindow : Window, IDisposable
         if (ImGui.Checkbox("Connect Automatically", ref connectAutomatically))
         {
             Configuration.ConnectAutomatically = connectAutomatically;
-            if (!connectAutomatically && !_client.IsConnected)
+            if (!connectAutomatically && _client is not null && !_client.IsConnected)
             {
                 // if we aren't connected we want to kill the thread
                 _client.Stop();
-            } else if (connectAutomatically && !_client.IsConnected)
+            } else if (connectAutomatically && _client is not null && !_client.IsConnected)
             {
                 // Alternatively we do want to start if we aren't!
                 _client.Start();
