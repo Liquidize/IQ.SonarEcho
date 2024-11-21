@@ -23,7 +23,7 @@
             "Discord",
             "Bot"
         ],
-        "DalamudApiLevel": 11,
+        "DalamudApiLevel": 10,
         "LoadPriority": 0,
         "IconUrl": "https://i.imgur.com/orR6E3t.png",
         "ImageUrls": [
