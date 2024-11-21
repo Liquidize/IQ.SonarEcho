@@ -61,7 +61,6 @@ namespace IQ.SonarEcho
             this.Configuration = this.PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             this.Configuration.Initialize(this.PluginInterface);
 
-
             Client = new SonarClient(Configuration, ChatGui, Log);       
             
             ConfigWindow = new ConfigWindow(this);
@@ -107,5 +106,8 @@ namespace IQ.SonarEcho
         {
             ConfigWindow.IsOpen = true;
         }
+        
+        
+        
     }
 }

@@ -34,7 +34,7 @@ public class ConfigWindow : Window, IDisposable
         var connectAutomatically = this.Configuration.ConnectAutomatically;
         ImGui.Text("Status: ");
         ImGui.SameLine();
-        if (_client.IsConnected)
+        if (_client is not null && _client.IsConnected)
         {
             ImGui.TextColored(new Vector4(0,255,0, 255), "Connected");
         } else if (!_client.IsConnected)
@@ -46,14 +46,14 @@ public class ConfigWindow : Window, IDisposable
             ImGui.Text("Unknown");
         }
 
-        if (_client != null && _client.IsConnected)
+        if (_client is not null && _client.IsConnected)
         {
             ImGui.SameLine();
             if (ImGui.Button("Disconnect"))
             {
                _client.Stop();
             }
-        } else if (_client != null && !_client.IsConnected)
+        } else if (_client is not null && !_client.IsConnected)
         {
             ImGui.SameLine();
             if (ImGui.Button("Connect"))
