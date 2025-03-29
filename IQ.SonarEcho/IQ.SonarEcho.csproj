@@ -12,8 +12,8 @@
     <PackageLicenseExpression>Not Licensed</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
     <RootNamespace>IQ.SonarEcho</RootNamespace>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <AssemblyVersion>1.0.6</AssemblyVersion>
+    <FileVersion>1.0.6</FileVersion>
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
     
