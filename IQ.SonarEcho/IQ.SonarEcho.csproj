@@ -12,12 +12,14 @@
     <PackageLicenseExpression>Not Licensed</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
     <RootNamespace>IQ.SonarEcho</RootNamespace>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
+    <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
     
   <ItemGroup>
     <PackageReference Include="WatsonWebsocket" Version="4.1.1" />
+    <PackageReference Update="DalamudPackager" Version="12.0.0" />
   </ItemGroup>
     
   <ItemGroup>
